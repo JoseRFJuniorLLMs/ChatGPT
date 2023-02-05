@@ -19,3 +19,15 @@ Acesso à API do OpenAI com uma chave API válida
 Diretório mp3 para salvar os arquivos de áudio gerados.
 
 # Dependencias
+configparser
+openai
+gtts
+playsound
+datetime
+
+# Para ativar um ambiente virtual (virtual environment) em Python, você pode seguir os seguintes passos:
+
+Instale o pacote virtualenv, caso ainda não tenha feito: pip install virtualenv
+Crie o ambiente virtual:  virtualenv nome_do_ambiente
+Ative o ambiente virtual: source nome_do_ambiente/bin/activate
+
