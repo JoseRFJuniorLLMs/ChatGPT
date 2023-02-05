@@ -1,3 +1,6 @@
+﻿# DP-203
+![](mp3/screen.png)
+
 # Arquitetura:
 
 A arquitetura do código consiste em ler uma configuração de um arquivo "config.ini", que contém a API key do OpenAI. 
