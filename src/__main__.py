@@ -18,10 +18,10 @@ while True:
     try:
         frase = input("Qual sua pergunta Mestre Junior para GPT4 : ")
         response = openai.Completion.create(
-            #engine="davinci",
+            # engine="davinci",
             ##engine="text-davinci-002",
             engine="text-davinci-003",
-            #model="code-davinci-002",
+            # model="code-davinci-002",
             prompt=frase,
             max_tokens=1024,  # Aumente o número máximo de tokens para obter respostas mais longas
             temperature=0.9,  # Aumente a temperatura para obter respostas mais criativas
@@ -37,7 +37,7 @@ while True:
         tts.save(filename)
         playsound(filename)
         with open(filename_text, 'w') as file:
-            file.write(frase +' : '+ response['choices'][0]['text'])
+            file.write(frase + ' : ' + response['choices'][0]['text'])
 
     except:
         print(response['choices'][0]['text'])
@@ -59,5 +59,3 @@ while True:
 
 if __name__ == "__main__":
     pass
-
-
