@@ -23,9 +23,9 @@ while True:
             engine="text-davinci-003",
             #model="code-davinci-002",
             prompt=frase,
-            max_tokens=50,
-            temperature=0.7,
-            top_p=1.0
+            max_tokens=1024,  # Aumente o número máximo de tokens para obter respostas mais longas
+            temperature=0.9,  # Aumente a temperatura para obter respostas mais criativas
+            top_p=0.9,  # Diminua o valor de top_p para obter respostas mais inovadoras
         )
         print(response['choices'][0]['text'])
 
@@ -33,8 +33,11 @@ while True:
         tts = gTTS(response['choices'][0]['text'], lang='pt')
         now = datetime.datetime.now()
         filename = f"mp3/{now.strftime('%Y-%m-%d %H:%M:%S')}.mp3"
+        filename_text = f"text/{now.strftime('%Y-%m-%d %H:%M:%S')}.txt"
         tts.save(filename)
         playsound(filename)
+        with open(filename_text, 'w') as file:
+            file.write(frase +' : '+ response['choices'][0]['text'])
 
     except:
         print(response['choices'][0]['text'])
@@ -56,3 +59,5 @@ while True:
 
 if __name__ == "__main__":
     pass
+
+
