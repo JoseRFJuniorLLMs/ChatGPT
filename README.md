@@ -1,5 +1,4 @@
-﻿# DP-203
-![](mp3/screen.png)
+![](src/mp3/screen.png)
 
 # Arquitetura:
 
